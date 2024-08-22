@@ -1,0 +1,993 @@
+{
+    "importedFrom": "file:///c:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/lab2.X",
+    "version": "1.1",
+    "configurations": [
+        {
+            "name": "default",
+            "id": "conf1",
+            "targetDevice": "ATSAMD21J18A",
+            "imageType": "application",
+            "platformTool": "default-edbg",
+            "packs": [
+                {
+                    "name": "CMSIS",
+                    "vendor": "ARM",
+                    "version": "5.4.0"
+                },
+                {
+                    "name": "SAMD21_DFP",
+                    "vendor": "Microchip",
+                    "version": "3.6.144"
+                }
+            ],
+            "fileSet": "MPLAB X Virtual Filesystem",
+            "outputFiles": [
+                {
+                    "name": "build",
+                    "toolchain": "default-XC32",
+                    "imagePath": "./out/lab2/default.elf"
+                }
+            ]
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC32",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc32-toolchain@4.40",
+            "properties": {
+                "compiler": "default-C32",
+                "compiler++": "default-C32CPP",
+                "assembler": "default-C32-AS",
+                "archiver": "default-C32-AR",
+                "linker": "default-C32-LD",
+                "coverage": "default-C32-CO",
+                "global": "default-C32Global"
+            }
+        },
+        {
+            "name": "default-C32",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-compiler@4.40",
+            "properties": {
+                "additional-warnings": true,
+                "addresss-attribute-use": false,
+                "appendMe": "",
+                "enable-app-io": false,
+                "enable-omit-frame-pointer": false,
+                "enable-symbols": true,
+                "enable-unroll-loops": false,
+                "exclude-floating-point": false,
+                "extra-include-directories": "src;src/config/default;src/config/default/system/fs/fat_fs/file_system;src/config/default/system/fs/fat_fs/hardware_access;src/packs/ATSAMD21J18A_DFP;src/packs/CMSIS;src/packs/CMSIS/CMSIS/Core/Include",
+                "generate-16-bit-code": false,
+                "generate-micro-compressed-code": false,
+                "isolate-each-function": true,
+                "make-warnings-into-errors": true,
+                "optimization-level": "-O1",
+                "place-data-into-section": true,
+                "post-instruction-scheduling": "default",
+                "pre-instruction-scheduling": "default",
+                "preprocessor-macros": "",
+                "strict-ansi": false,
+                "support-ansi": false,
+                "tentative-definitions": "-fno-common",
+                "toplevel-reordering": "",
+                "unaligned-access": "",
+                "use-cci": false,
+                "use-iar": false,
+                "use-indirect-calls": false
+            }
+        },
+        {
+            "name": "default-C32CPP",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-compiler++@4.40",
+            "properties": {
+                "additional-warnings": false,
+                "addresss-attribute-use": false,
+                "appendMe": "",
+                "check-new": false,
+                "eh-specs": true,
+                "enable-app-io": false,
+                "enable-omit-frame-pointer": false,
+                "enable-symbols": true,
+                "enable-unroll-loops": false,
+                "exceptions": true,
+                "exclude-floating-point": false,
+                "extra-include-directories": "src;src/config/default;src/config/default/system/fs/fat_fs/file_system;src/config/default/system/fs/fat_fs/hardware_access;src/packs/ATSAMD21J18A_DFP;src/packs/CMSIS;src/packs/CMSIS/CMSIS/Core/Include",
+                "generate-16-bit-code": false,
+                "generate-micro-compressed-code": false,
+                "isolate-each-function": true,
+                "make-warnings-into-errors": false,
+                "optimization-level": "-O1",
+                "place-data-into-section": false,
+                "post-instruction-scheduling": "default",
+                "pre-instruction-scheduling": "default",
+                "preprocessor-macros": "",
+                "rtti": true,
+                "strict-ansi": false,
+                "toplevel-reordering": "",
+                "unaligned-access": "",
+                "use-cci": false,
+                "use-iar": false,
+                "use-indirect-calls": false
+            }
+        },
+        {
+            "name": "default-C32-AS",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-assembler@4.40",
+            "properties": {
+                "assembler-symbols": "",
+                "enable-symbols": true,
+                "exclude-floating-point-library": false,
+                "expand-macros": false,
+                "extra-include-directories-for-assembler": "",
+                "extra-include-directories-for-preprocessor": "",
+                "false-conditionals": false,
+                "generate-16-bit-code": false,
+                "generate-micro-compressed-code": false,
+                "keep-locals": false,
+                "list-assembly": false,
+                "list-source": false,
+                "list-symbols": false,
+                "oXC32asm-list-to-file": false,
+                "omit-debug-dirs": false,
+                "omit-forms": false,
+                "preprocessor-macros": "",
+                "warning-level": ""
+            }
+        },
+        {
+            "name": "default-C32-AR",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-archiver@4.40",
+            "properties": {
+                "additional-options-chop-files": false
+            }
+        },
+        {
+            "name": "default-C32-LD",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-linker@4.40",
+            "properties": {
+                "additional-options-use-response-files": false,
+                "additional-options-write-sla": false,
+                "allocate-dinit": false,
+                "appendMe": "",
+                "code-dinit": false,
+                "ebase-addr": "",
+                "enable-check-sections": false,
+                "exclude-floating-point-library": false,
+                "exclude-standard-libraries": false,
+                "extra-lib-directories": "",
+                "fill-flash-options-addr": "",
+                "fill-flash-options-const": "",
+                "fill-flash-options-how": "0",
+                "fill-flash-options-inc-const": "1",
+                "fill-flash-options-increment": "",
+                "fill-flash-options-seq": "",
+                "fill-flash-options-what": "0",
+                "generate-16-bit-code": false,
+                "generate-cross-reference-file": false,
+                "generate-micro-compressed-code": false,
+                "heap-size": "512",
+                "input-libraries": "",
+                "kseg-length": "",
+                "kseg-origin": "",
+                "linker-symbols": "",
+                "map-file": "",
+                "no-device-startup-code": true,
+                "no-startup-files": false,
+                "oXC32ld-extra-opts": "",
+                "optimization-level": "",
+                "preprocessor-macros": "",
+                "remove-unused-sections": true,
+                "report-memory-usage": false,
+                "serial-length": "",
+                "serial-origin": "",
+                "stack-size": "",
+                "symbol-stripping": "",
+                "trace-symbols": "",
+                "warn-section-align": false
+            }
+        },
+        {
+            "name": "default-C32-CO",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-coverage@4.40",
+            "properties": {
+                "coverage-enable": "",
+                "stack-guidance": false
+            }
+        },
+        {
+            "name": "default-C32Global",
+            "type": "translator",
+            "provider": "microchip.toolchains:xc32-global@4.40",
+            "properties": {
+                "common-include-directories": "",
+                "gp-relative-option": "",
+                "legacy-libc": false,
+                "mdtcm": "",
+                "mitcm": "",
+                "mstacktcm": false,
+                "omit-pack-options": "1",
+                "relaxed-math": false,
+                "save-temps": false,
+                "stack-smashing": "",
+                "wpo-lto": false
+            }
+        },
+        {
+            "name": "tool-base",
+            "type": "tool",
+            "provider": "microchip.tool-*:generic",
+            "properties": {
+                "AutoSelectMemRanges": "auto",
+                "arm.use_vtor": false,
+                "arm.vtor_adr": "exception_table",
+                "communication.activationmode": "nohv",
+                "communication.interface": "swd",
+                "communication.speed": "2,000",
+                "debugoptions.debug-startup": "Use system settings",
+                "debugoptions.reset-behaviour": "Use system settings",
+                "debugoptions.useswbreakpoints": false,
+                "event.recorder.debugger.behavior": "Running",
+                "event.recorder.enabled": false,
+                "event.recorder.scvd.files": "",
+                "firmware.path": "Press to browse for a specific firmware version",
+                "firmware.toolpack": "Press to select which tool pack to use",
+                "firmware.update.action": "firmware.update.use.latest",
+                "freeze.timers": false,
+                "lastid": "",
+                "loader.board_file": "../board.xboard",
+                "memories.aux": false,
+                "memories.bootflash": true,
+                "memories.configurationmemory": true,
+                "memories.configurationmemory2": true,
+                "memories.dataflash": true,
+                "memories.eeprom": true,
+                "memories.exclude.configurationmemory": true,
+                "memories.flashdata": true,
+                "memories.id": true,
+                "memories.instruction.ram.ranges": "${memories.instruction.ram.ranges}",
+                "memories.programmemory": true,
+                "memories.programmemory.ranges": "0-3ffff",
+                "poweroptions.powerenable": false,
+                "programoptions.eraseb4program": true,
+                "programoptions.preservedataflash": false,
+                "programoptions.preservedataflash.ranges": "${memories.dataflash.default}",
+                "programoptions.preserveeeprom": false,
+                "programoptions.preserveeeprom.ranges": "",
+                "programoptions.preserveprogram.ranges": "",
+                "programoptions.preserveprogramrange": false,
+                "programoptions.preserveuserid": false,
+                "programoptions.programuserotp": false,
+                "script.has_reset": true,
+                "script.log_level": "1",
+                "script.reset_delay": "0",
+                "script.show_output": false,
+                "toolpack.updateoptions": "toolpack.updateoptions.uselatestoolpack",
+                "toolpack.updateoptions.packversion": "Press to select which tool pack to use",
+                "voltagevalue": "",
+                "x.erase.clearprot": true
+            }
+        },
+        {
+            "name": "default-tool-base",
+            "extend": "tool-base",
+            "type": "tool",
+            "provider": "microchip.tool-*:generic",
+            "properties": {}
+        },
+        {
+            "name": "default-edbg",
+            "extend": "default-tool-base",
+            "type": "tool",
+            "provider": "microchip.tool-*:edbg",
+            "properties": {}
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "MPLAB X Virtual Filesystem",
+            "contains": [
+                "Header Files",
+                "Important Files",
+                "Linker Files",
+                "Source Files"
+            ]
+        },
+        {
+            "name": "Header Files",
+            "contains": [
+                "config",
+                "packs"
+            ],
+            "files": [
+                "src/app_i2c_temp_sensor.h",
+                "src/app_sdcard.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "config",
+            "contains": [
+                "default"
+            ]
+        },
+        {
+            "name": "default",
+            "contains": [
+                "bsp",
+                "driver",
+                "osal",
+                "peripheral",
+                "system"
+            ],
+            "files": [
+                "src/config/default/interrupts.h",
+                "src/config/default/definitions.h",
+                "src/config/default/toolchain_specifics.h",
+                "src/config/default/user.h",
+                "src/config/default/configuration.h",
+                "src/config/default/device.h",
+                "src/config/default/device_cache.h",
+                "src/config/default/device_vectors.h",
+                "src/config/default/sys_tasks.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "bsp",
+            "files": [
+                "src/config/default/bsp/bsp.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "driver",
+            "contains": [
+                "i2c",
+                "sdspi",
+                "spi"
+            ],
+            "files": [
+                "src/config/default/driver/driver_common.h",
+                "src/config/default/driver/driver.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "i2c",
+            "files": [
+                "src/config/default/driver/i2c/drv_i2c_definitions.h",
+                "src/config/default/driver/i2c/drv_i2c.h",
+                "src/config/default/driver/i2c/src/drv_i2c_local.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "sdspi",
+            "files": [
+                "src/config/default/driver/sdspi/src/drv_sdspi_local.h",
+                "src/config/default/driver/sdspi/src/drv_sdspi_file_system.h",
+                "src/config/default/driver/sdspi/drv_sdspi.h",
+                "src/config/default/driver/sdspi/drv_sdspi_definitions.h",
+                "src/config/default/driver/sdspi/src/drv_sdspi_driver_interface.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "spi",
+            "files": [
+                "src/config/default/driver/spi/drv_spi.h",
+                "src/config/default/driver/spi/src/drv_spi_local.h",
+                "src/config/default/driver/spi/drv_spi_definitions.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "osal",
+            "files": [
+                "src/config/default/osal/osal.h",
+                "src/config/default/osal/osal_impl_basic.h",
+                "src/config/default/osal/osal_definitions.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "peripheral",
+            "contains": [
+                "clock",
+                "evsys",
+                "nvic",
+                "nvmctrl",
+                "port",
+                "rtc",
+                "sercom",
+                "tc"
+            ]
+        },
+        {
+            "name": "clock",
+            "files": [
+                "src/config/default/peripheral/clock/plib_clock.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "evsys",
+            "files": [
+                "src/config/default/peripheral/evsys/plib_evsys.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "nvic",
+            "files": [
+                "src/config/default/peripheral/nvic/plib_nvic.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "nvmctrl",
+            "files": [
+                "src/config/default/peripheral/nvmctrl/plib_nvmctrl.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "port",
+            "files": [
+                "src/config/default/peripheral/port/plib_port.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "rtc",
+            "files": [
+                "src/config/default/peripheral/rtc/plib_rtc.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "sercom",
+            "contains": [
+                "i2c_master",
+                "spi_master",
+                "usart"
+            ]
+        },
+        {
+            "name": "i2c_master",
+            "files": [
+                "src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h",
+                "src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "spi_master",
+            "files": [
+                "src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.h",
+                "src/config/default/peripheral/sercom/spi_master/plib_sercom_spi_master_common.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "usart",
+            "files": [
+                "src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h",
+                "src/config/default/peripheral/sercom/usart/plib_sercom3_usart.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "tc",
+            "files": [
+                "src/config/default/peripheral/tc/plib_tc3.h",
+                "src/config/default/peripheral/tc/plib_tc_common.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "system",
+            "contains": [
+                "console",
+                "debug",
+                "fs",
+                "int",
+                "ports",
+                "time"
+            ],
+            "files": [
+                "src/config/default/system/system.h",
+                "src/config/default/system/system_module.h",
+                "src/config/default/system/system_common.h",
+                "src/config/default/system/system_media.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "console",
+            "files": [
+                "src/config/default/system/console/src/sys_console_uart_definitions.h",
+                "src/config/default/system/console/sys_console.h",
+                "src/config/default/system/console/src/sys_console_local.h",
+                "src/config/default/system/console/src/sys_console_uart.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "debug",
+            "files": [
+                "src/config/default/system/debug/sys_debug.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "fs",
+            "contains": [
+                "fat_fs"
+            ],
+            "files": [
+                "src/config/default/system/fs/sys_fs_media_manager.h",
+                "src/config/default/system/fs/src/sys_fs_local.h",
+                "src/config/default/system/fs/sys_fs.h",
+                "src/config/default/system/fs/sys_fs_fat_interface.h",
+                "src/config/default/system/fs/src/sys_fs_media_manager_local.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "fat_fs",
+            "contains": [
+                "file_system",
+                "hardware_access"
+            ]
+        },
+        {
+            "name": "file_system",
+            "files": [
+                "src/config/default/system/fs/fat_fs/file_system/ffconf.h",
+                "src/config/default/system/fs/fat_fs/file_system/ff.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "hardware_access",
+            "files": [
+                "src/config/default/system/fs/fat_fs/hardware_access/diskio.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "int",
+            "files": [
+                "src/config/default/system/int/sys_int_mapping.h",
+                "src/config/default/system/int/sys_int.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "ports",
+            "files": [
+                "src/config/default/system/ports/sys_ports.h",
+                "src/config/default/system/ports/sys_ports_mapping.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "time",
+            "files": [
+                "src/config/default/system/time/src/sys_time_local.h",
+                "src/config/default/system/time/sys_time_definitions.h",
+                "src/config/default/system/time/sys_time.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "packs",
+            "contains": [
+                "ATSAMD21J18A_DFP",
+                "CMSIS"
+            ]
+        },
+        {
+            "name": "ATSAMD21J18A_DFP",
+            "contains": [
+                "component",
+                "instance",
+                "pio"
+            ],
+            "files": [
+                "src/packs/ATSAMD21J18A_DFP/samd21j18a.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "component",
+            "files": [
+                "src/packs/ATSAMD21J18A_DFP/component/nvmctrl.h",
+                "src/packs/ATSAMD21J18A_DFP/component/dmac.h",
+                "src/packs/ATSAMD21J18A_DFP/component/sercom.h",
+                "src/packs/ATSAMD21J18A_DFP/component/tcc.h",
+                "src/packs/ATSAMD21J18A_DFP/component/usb.h",
+                "src/packs/ATSAMD21J18A_DFP/component/gclk.h",
+                "src/packs/ATSAMD21J18A_DFP/component/hmatrixb.h",
+                "src/packs/ATSAMD21J18A_DFP/component/wdt.h",
+                "src/packs/ATSAMD21J18A_DFP/component/evsys.h",
+                "src/packs/ATSAMD21J18A_DFP/component/i2s.h",
+                "src/packs/ATSAMD21J18A_DFP/component/eic.h",
+                "src/packs/ATSAMD21J18A_DFP/component/adc.h",
+                "src/packs/ATSAMD21J18A_DFP/component/mtb.h",
+                "src/packs/ATSAMD21J18A_DFP/component/rtc.h",
+                "src/packs/ATSAMD21J18A_DFP/component/dsu.h",
+                "src/packs/ATSAMD21J18A_DFP/component/ac.h",
+                "src/packs/ATSAMD21J18A_DFP/component/fuses.h",
+                "src/packs/ATSAMD21J18A_DFP/component/ptc.h",
+                "src/packs/ATSAMD21J18A_DFP/component/tc.h",
+                "src/packs/ATSAMD21J18A_DFP/component/pac.h",
+                "src/packs/ATSAMD21J18A_DFP/component/pm.h",
+                "src/packs/ATSAMD21J18A_DFP/component/dac.h",
+                "src/packs/ATSAMD21J18A_DFP/component/sysctrl.h",
+                "src/packs/ATSAMD21J18A_DFP/component/port.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "instance",
+            "files": [
+                "src/packs/ATSAMD21J18A_DFP/instance/pac0.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tc4.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/usb.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/ptc.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/fuses.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom0.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/port.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom4.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/mtb.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tc7.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/pac1.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tc3.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/adc.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/eic.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tcc2.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/wdt.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom3.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/gclk.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sysctrl.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/pm.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tc6.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/dac.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/pac2.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/ac.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tcc1.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/nvmctrl.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/dsu.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/i2s.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom2.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/rtc.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tc5.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sbmatrix.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/dmac.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/evsys.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/tcc0.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom1.h",
+                "src/packs/ATSAMD21J18A_DFP/instance/sercom5.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "pio",
+            "files": [
+                "src/packs/ATSAMD21J18A_DFP/pio/samd21j18a.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "CMSIS",
+            "contains": [
+                "CMSIS_2"
+            ]
+        },
+        {
+            "name": "CMSIS_2",
+            "contains": [
+                "Core"
+            ]
+        },
+        {
+            "name": "Core",
+            "contains": [
+                "Include"
+            ]
+        },
+        {
+            "name": "Include",
+            "files": [
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h",
+                "src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "Important Files",
+            "files": [
+                "lab2.X/Makefile",
+                "lab2.X/lab1.mc3"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "Linker Files",
+            "contains": [
+                "config_2"
+            ],
+            "translator": "toolchain:linker"
+        },
+        {
+            "name": "config_2",
+            "contains": [
+                "default_2"
+            ]
+        },
+        {
+            "name": "default_2",
+            "files": [
+                "src/config/default/ATSAMD21J18A.ld"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "Source Files",
+            "contains": [
+                "config_3"
+            ],
+            "files": [
+                "src/app_i2c_temp_sensor.c",
+                "src/main.c",
+                "src/config/default/pin_configurations.csv",
+                "src/app_sdcard.c"
+            ],
+            "encoding": "UTF-8",
+            "translator": "toolchain:compiler"
+        },
+        {
+            "name": "config_3",
+            "contains": [
+                "default_3"
+            ]
+        },
+        {
+            "name": "default_3",
+            "contains": [
+                "bsp_2",
+                "driver_2",
+                "peripheral_2",
+                "stdio",
+                "system_2"
+            ],
+            "files": [
+                "src/config/default/tasks.c",
+                "src/config/default/startup_xc32.c",
+                "src/config/default/exceptions.c",
+                "src/config/default/libc_syscalls.c",
+                "src/config/default/initialization.c",
+                "src/config/default/interrupts.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "bsp_2",
+            "files": [
+                "src/config/default/bsp/bsp.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "driver_2",
+            "contains": [
+                "i2c_2",
+                "sdspi_2",
+                "spi_2"
+            ]
+        },
+        {
+            "name": "i2c_2",
+            "files": [
+                "src/config/default/driver/i2c/src/drv_i2c.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "sdspi_2",
+            "files": [
+                "src/config/default/driver/sdspi/src/drv_sdspi_file_system.c",
+                "src/config/default/driver/sdspi/src/drv_sdspi_driver_interface.c",
+                "src/config/default/driver/sdspi/src/drv_sdspi.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "spi_2",
+            "files": [
+                "src/config/default/driver/spi/src/drv_spi.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "peripheral_2",
+            "contains": [
+                "clock_2",
+                "evsys_2",
+                "nvic_2",
+                "nvmctrl_2",
+                "port_2",
+                "rtc_2",
+                "sercom_2",
+                "tc_2"
+            ]
+        },
+        {
+            "name": "clock_2",
+            "files": [
+                "src/config/default/peripheral/clock/plib_clock.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "evsys_2",
+            "files": [
+                "src/config/default/peripheral/evsys/plib_evsys.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "nvic_2",
+            "files": [
+                "src/config/default/peripheral/nvic/plib_nvic.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "nvmctrl_2",
+            "files": [
+                "src/config/default/peripheral/nvmctrl/plib_nvmctrl.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "port_2",
+            "files": [
+                "src/config/default/peripheral/port/plib_port.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "rtc_2",
+            "files": [
+                "src/config/default/peripheral/rtc/plib_rtc_clock.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "sercom_2",
+            "contains": [
+                "i2c_master_2",
+                "spi_master_2",
+                "usart_2"
+            ]
+        },
+        {
+            "name": "i2c_master_2",
+            "files": [
+                "src/config/default/peripheral/sercom/i2c_master/plib_sercom2_i2c_master.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "spi_master_2",
+            "files": [
+                "src/config/default/peripheral/sercom/spi_master/plib_sercom0_spi_master.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "usart_2",
+            "files": [
+                "src/config/default/peripheral/sercom/usart/plib_sercom3_usart.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "tc_2",
+            "files": [
+                "src/config/default/peripheral/tc/plib_tc3.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "stdio",
+            "files": [
+                "src/config/default/stdio/xc32_monitor.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "system_2",
+            "contains": [
+                "console_2",
+                "fs_2",
+                "int_2",
+                "time_2"
+            ]
+        },
+        {
+            "name": "console_2",
+            "files": [
+                "src/config/default/system/console/src/sys_console_uart.c",
+                "src/config/default/system/console/src/sys_console.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "fs_2",
+            "contains": [
+                "fat_fs_2"
+            ],
+            "files": [
+                "src/config/default/system/fs/src/sys_fs_media_manager.c",
+                "src/config/default/system/fs/src/sys_fs.c",
+                "src/config/default/system/fs/src/sys_fs_fat_interface.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "fat_fs_2",
+            "contains": [
+                "file_system_2",
+                "hardware_access_2"
+            ]
+        },
+        {
+            "name": "file_system_2",
+            "files": [
+                "src/config/default/system/fs/fat_fs/file_system/ffunicode.c",
+                "src/config/default/system/fs/fat_fs/file_system/ff.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "hardware_access_2",
+            "files": [
+                "src/config/default/system/fs/fat_fs/hardware_access/diskio.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "int_2",
+            "files": [
+                "src/config/default/system/int/src/sys_int.c"
+            ],
+            "encoding": "UTF-8"
+        },
+        {
+            "name": "time_2",
+            "files": [
+                "src/config/default/system/time/src/sys_time.c"
+            ],
+            "encoding": "UTF-8"
+        }
+    ]
+}

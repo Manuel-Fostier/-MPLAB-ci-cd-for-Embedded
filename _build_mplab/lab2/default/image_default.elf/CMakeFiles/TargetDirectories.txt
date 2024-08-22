@@ -1,0 +1,5 @@
+C:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/_build_mplab/lab2/default/image_default.elf/CMakeFiles/compile.dir
+C:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/_build_mplab/lab2/default/image_default.elf/CMakeFiles/default.elf.dir
+C:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/_build_mplab/lab2/default/image_default.elf/CMakeFiles/Bin2Hex.dir
+C:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/_build_mplab/lab2/default/image_default.elf/CMakeFiles/edit_cache.dir
+C:/Users/silenteagle/MPLABXProjects/advancedEmbeddedApp/lab2/_build_mplab/lab2/default/image_default.elf/CMakeFiles/rebuild_cache.dir
