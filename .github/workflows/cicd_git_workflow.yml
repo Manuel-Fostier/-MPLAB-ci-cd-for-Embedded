@@ -1,0 +1,19 @@
+name: HelloCIWorld-SAMD
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: clean
+      run: make clean
+    - name: make
+      run: make -j4 -C cicd_project.X
+    - uses: actions/upload-artifact@v1
+      with:
+        name: noEthBuild_$.$_$.zip
+        path: cicd_project.X/dist/default/production
