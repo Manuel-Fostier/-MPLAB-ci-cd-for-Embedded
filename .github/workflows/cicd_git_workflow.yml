@@ -11,6 +11,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: clean
       run: make clean
+    - name: generate-makefiles
+      run: prjMakefilesGenerator.bat cicd_project.X
     - name: make
       run: make -j4 -C cicd_project.X
     - uses: actions/upload-artifact@v1
