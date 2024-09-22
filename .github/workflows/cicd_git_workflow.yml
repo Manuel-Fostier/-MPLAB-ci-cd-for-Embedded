@@ -8,14 +8,14 @@ jobs:
     runs-on: self-hosted
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: clean
       run: make clean
     - name: generate-makefiles
       run: prjMakefilesGenerator.bat cicd_project.X
     - name: make
       run: make -j4 -C cicd_project.X
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v4
       with:
         name: noEthBuild_$.$_$.zip
         path: cicd_project.X/dist/default/production
