@@ -9,10 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
-    - name: clean
-      run: make -j4 -C cicd_project.X clean
     - name: generate-makefiles
       run: prjMakefilesGenerator.bat cicd_project.X
+    - name: clean
+      run: make -j4 -C cicd_project.X clean
     - name: make
       run: make -j4 -C cicd_project.X
     - uses: actions/upload-artifact@v4
