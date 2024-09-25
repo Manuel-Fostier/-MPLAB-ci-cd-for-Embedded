@@ -44,6 +44,10 @@ int main ( void )
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
     }
+	
+	char a[10];
+    a[10] = 0;
+    return 0;
 
     /* Execution should not come here during normal operation */
 
