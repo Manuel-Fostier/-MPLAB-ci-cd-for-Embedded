@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: run static analysis
-      run: static-analysis.bat
+      run: .\static_analysis.bat
     - name: generate-makefiles
       run: prjMakefilesGenerator.bat cicd_project.X
     - name: clean
