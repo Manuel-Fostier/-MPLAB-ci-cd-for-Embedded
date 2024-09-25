@@ -27,6 +27,3 @@
 *.exe
 *.zip
 *.pdf
-
-# CppCheck build directory
-cppcheck-build-dir/
