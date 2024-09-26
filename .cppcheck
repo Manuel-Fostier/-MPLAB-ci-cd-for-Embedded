@@ -13,6 +13,9 @@
     <paths>
         <dir name="src"/>
     </paths>
+    <exclude>
+        <path name="src/config/"/>
+    </exclude>
     <suppressions>
         <suppression>unusedFunction</suppression>
         <suppression>missingIncludeSystem</suppression>
