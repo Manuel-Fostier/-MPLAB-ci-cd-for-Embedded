@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: run static analysis
-      run: cppcheck --quiet --project=.cppcheck
+      run: cppcheck --quiet --error-exitcode=1 --project=.cppcheck
     - name: generate-makefiles
       run: prjMakefilesGenerator.bat cicd_project.X
     - name: clean
